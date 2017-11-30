@@ -3,13 +3,29 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Untitled Document</title>
+  <title>Enlarge Player on Mouseover</title>
+  <!-- Styles for your custom player -->
+  <link href="enlarge-player.css" rel="stylesheet">
 </head>
 
 <body>
+  <!-- Wrapper to control the player size -->
+  <div id="playerWrapper">
+    <!-- Video embed code with id and style attributes -->
+    <video id="myPlayerID"
+  	data-video-id="4825279542001"
+  	data-account="1752604059001"
+  	data-player="default"
+  	data-embed="default"
+  	class="video-js"
+  	controls
+  	style="width: 100%; height: 100%;"></video>
+  	<script src="//players.brightcove.net/1752604059001/default_default/index.min.js"></script>
+  </div>
 
-
+  <!-- Custom script for enlarging the player -->
+  <script type="text/javascript" src="enlarge-player.js"></script>
+  <script>videojs('myPlayerID').enlargePlayer();</script>
 
 </body>
-
 </html>
